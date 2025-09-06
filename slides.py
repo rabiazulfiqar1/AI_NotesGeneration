@@ -5,9 +5,9 @@ from scenedetect.scene_manager import save_images
 
 # # STEP 1: Download YouTube video as MP4
 # url = "https://www.youtube.com/watch?v=WEyYaIWIUp0"
-url = "https://www.youtube.com/watch?v=tutujWOdWwg"
-# url = "https://www.youtube.com/watch?v=9SOSfRNCQZQ"
-video_filename = "video.mp4"   # local file name
+# url = "https://www.youtube.com/watch?v=tutujWOdWwg"
+url = "https://www.youtube.com/watch?v=9SOSfRNCQZQ"
+video_filename = "video2.mp4"   # local file name
 
 # ydl_opts = {
 #     "outtmpl": video_filename,
@@ -21,7 +21,7 @@ video_filename = "video.mp4"   # local file name
 # print(f"Video downloaded as {video_filename}")
 
 # STEP 2: Run PySceneDetect to extract slides
-output_dir = "slides"
+output_dir = "slides2"
 
 video_manager = VideoManager([video_filename])
 scene_manager = SceneManager()
