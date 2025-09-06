@@ -7,7 +7,8 @@ from scenedetect.scene_manager import save_images
 # url = "https://www.youtube.com/watch?v=WEyYaIWIUp0"
 # url = "https://www.youtube.com/watch?v=tutujWOdWwg"
 url = "https://www.youtube.com/watch?v=9SOSfRNCQZQ"
-video_filename = "video2.mp4"   # local file name
+video_filename = "video3.mp4"   # local file name
+# video_filename = "coursera.mp4"
 
 # ydl_opts = {
 #     "outtmpl": video_filename,
@@ -21,11 +22,12 @@ video_filename = "video2.mp4"   # local file name
 # print(f"Video downloaded as {video_filename}")
 
 # STEP 2: Run PySceneDetect to extract slides
-output_dir = "slides2"
+# output_dir = "slides2"
+output_dir = "video3"
 
 video_manager = VideoManager([video_filename])
 scene_manager = SceneManager()
-scene_manager.add_detector(ContentDetector(threshold=5.0))  # adjust threshold if needed
+scene_manager.add_detector(ContentDetector(threshold=1.0))  # adjust threshold if needed
 
 video_manager.set_downscale_factor(1)  # speeds up detection
 video_manager.start()

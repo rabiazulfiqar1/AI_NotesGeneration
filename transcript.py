@@ -7,7 +7,8 @@ processor = WhisperProcessor.from_pretrained("openai/whisper-base")
 model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base")
 
 # Load audio and ensure 16kHz
-audio_path = "How to Learn Programming Languages in 1 Day (using Google).wav"
+audio_path = "courseraaudio.wav"
+# audio_path = "How to Learn Programming Languages in 1 Day (using Google).wav"
 speech_array, sr = librosa.load(audio_path, sr=16000)
 speech_array = torch.from_numpy(speech_array)
 
