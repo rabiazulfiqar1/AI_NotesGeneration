@@ -7,7 +7,7 @@ processor = WhisperProcessor.from_pretrained("openai/whisper-base")
 model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base")
 
 # Load audio and ensure 16kHz
-audio_path = "courseraaudio.wav"
+audio_path = "How to Learn Programming Languages in 1 Day (using Google).wav"
 # audio_path = "How to Learn Programming Languages in 1 Day (using Google).wav"
 speech_array, sr = librosa.load(audio_path, sr=16000)
 speech_array = torch.from_numpy(speech_array)
@@ -30,10 +30,12 @@ for i in range(num_chunks):
     )
     
     transcription = processor.batch_decode(predicted_ids, skip_special_tokens=True, output_offsets=True )
+    # text = transcription["text"].strip()
     print(f"\n--- Chunk {i+1} ---")
     print(transcription)
-    # full_transcript.append(transcription[0])
+    # full_transcript.append(text)
 
-# Join all chunks
+# Join all chunks into one transcript
 # final_transcript = " ".join(full_transcript)
+# print("\n===== Full Transcript =====\n")
 # print(final_transcript)
