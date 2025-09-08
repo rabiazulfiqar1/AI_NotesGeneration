@@ -8,9 +8,9 @@ from scenedetect.scene_manager import save_images
 # url = "https://www.youtube.com/watch?v=tutujWOdWwg"
 # url = "https://www.youtube.com/watch?v=9SOSfRNCQZQ"
 # url = "https://www.youtube.com/watch?v=FnENJbHKE54"
-url = "https://www.youtube.com/watch?v=8NQzcpWvq4g"
-video_filename = "OC.mp4"
-# video_filename = "tehreem.mp4"
+# url = "https://www.youtube.com/watch?v=8NQzcpWvq4g"
+url = "https://www.youtube.com/watch?v=oG8DKnNIZHY"
+video_filename = "tehreem.mp4"
 # video_filename = "video3.mp4"   # local file name
 # video_filename = "coursera.mp4"
 
@@ -27,7 +27,7 @@ print(f"Video downloaded as {video_filename}")
 
 # STEP 2: Run PySceneDetect to extract slides
 # output_dir = "slides2"
-output_dir = "OC"
+output_dir = "tehreem"
 
 video_manager = VideoManager([video_filename])
 scene_manager = SceneManager()
